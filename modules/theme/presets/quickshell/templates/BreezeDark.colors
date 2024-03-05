@@ -1,0 +1,211 @@
+# SPDX-FileCopyrightText: Andrew Lake <jamboarder@gmail.com>
+# SPDX-FileCopyrightText: Marco Martin <notmart@gmail.com>
+# SPDX-FileCopyrightText: Nate Graham <nate@kde.org>
+# SPDX-FileCopyrightText: Noah Davis <noahadvs@gmail.com>
+# SPDX-FileCopyrightText: Neal Gompa <ngompa@kde.org>
+# SPDX-FileCopyrightText: David Redondo <kde@david-redondo.de>
+# SPDX-License-Identifier: LGPL-2.0-or-later
+
+[ColorEffects:Disabled]
+Color={{colors.outline.default.red}},{{colors.outline.default.green}},{{colors.outline.default.blue}}
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color={{colors.outline_variant.default.red}},{{colors.outline_variant.default.green}},{{colors.outline_variant.default.blue}}
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate={{colors.surface_container_high.default.red}},{{colors.surface_container_high.default.green}},{{colors.surface_container_high.default.blue}}
+BackgroundNormal={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationHover={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundActive={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.tertiary_container.default.red}},{{colors.tertiary_container.default.green}},{{colors.tertiary_container.default.blue}}
+
+[Colors:Complementary]
+BackgroundAlternate={{colors.surface_container_high.default.red}},{{colors.surface_container_high.default.green}},{{colors.surface_container_high.default.blue}}
+BackgroundNormal={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationHover={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundActive={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.tertiary_container.default.red}},{{colors.tertiary_container.default.green}},{{colors.tertiary_container.default.blue}}
+
+[Colors:Header]
+BackgroundAlternate={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
+BackgroundNormal={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationHover={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundActive={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.tertiary_container.default.red}},{{colors.tertiary_container.default.green}},{{colors.tertiary_container.default.blue}}
+
+[Colors:Header][Inactive]
+BackgroundAlternate={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+BackgroundNormal={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
+DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationHover={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundActive={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.tertiary_container.default.red}},{{colors.tertiary_container.default.green}},{{colors.tertiary_container.default.blue}}
+
+[Colors:Selection]
+BackgroundAlternate={{colors.surface_container_high.default.red}},{{colors.surface_container_high.default.green}},{{colors.surface_container_high.default.blue}}
+BackgroundNormal={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationHover={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundActive={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.tertiary_container.default.red}},{{colors.tertiary_container.default.green}},{{colors.tertiary_container.default.blue}}
+
+[Colors:Tooltip]
+BackgroundAlternate={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
+BackgroundNormal={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationHover={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundActive={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.tertiary_container.default.red}},{{colors.tertiary_container.default.green}},{{colors.tertiary_container.default.blue}}
+
+[Colors:View]
+BackgroundAlternate={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
+BackgroundNormal={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
+DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationHover={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundActive={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.tertiary_container.default.red}},{{colors.tertiary_container.default.green}},{{colors.tertiary_container.default.blue}}
+
+[Colors:Window]
+BackgroundAlternate={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+BackgroundNormal={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
+DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+DecorationHover={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundActive={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.tertiary_container.default.red}},{{colors.tertiary_container.default.green}},{{colors.tertiary_container.default.blue}}
+
+[Icons]
+Theme=BreezeDark
+
+[General]
+ColorScheme=BreezeDark
+Name=Breeze Dark
+Name[ar]=نسيم داكن
+Name[az]=Breeze - Tünd
+Name[bg]=Breeze Тъмен
+Name[bs]=Breeze tamna
+Name[ca]=Brisa fosca
+Name[ca@valencia]=Brisa fosca
+Name[cs]=Breeze Tmavé
+Name[da]=Breeze Dark
+Name[de]=Breeze Dunkel
+Name[el]=Breeze σκούρο
+Name[en_GB]=Breeze Dark
+Name[eo]=Breeze Dark
+Name[es]=Brisa oscuro
+Name[et]=Breeze tume
+Name[eu]=Breeze iluna
+Name[fi]=Tumma Breeze
+Name[fr]=Brise sombre
+Name[gl]=Brisa escura
+Name[he]=בריזה כהה
+Name[hi]=ब्रीज़ गहरा
+Name[hu]=Breeze Dark
+Name[ia]=Brisa obscure
+Name[id]=Breeze Gelap
+Name[is]=Breeze dökkt
+Name[it]=Brezza scuro
+Name[ja]=Breeze ダーク
+Name[ka]=Breeze მუქი
+Name[ko]=어두운 Breeze
+Name[lt]=Breeze tamsus
+Name[lv]=Breeze Dark
+Name[nb]=Breeze mørk
+Name[nl]=Breeze Dark
+Name[nn]=Breeze mørk
+Name[pa]=ਬਰੀਜ਼ ਗੂੜ੍ਹਾ
+Name[pl]=Ciemna Bryza
+Name[pt]=Brisa Escura
+Name[pt_BR]=Breeze Dark
+Name[ro]=Briză, întunecat
+Name[ru]=Breeze, тёмный вариант
+Name[sa]=वायुः अन्धकारः
+Name[sk]=Tmavý vánok
+Name[sl]=Sapica, temna
+Name[sr]=Поветарац тамни
+Name[sr@ijekavian]=Поветарац тамни
+Name[sr@ijekavianlatin]=Povetarac tamni
+Name[sr@latin]=Povetarac tamni
+Name[sv]=Breeze mörk
+Name[tg]=Насими торик
+Name[tr]=Esinti Koyu
+Name[uk]=Темна Breeze
+Name[x-test]=xxBreeze Darkxx
+Name[zh_CN]=Breeze 微风深色
+Name[zh_TW]=Breeze Dark
+shadeSortColumn=true
+
+[KDE]
+contrast=4
+
+[WM]
+activeBackground={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+activeBlend={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+activeForeground={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+inactiveBackground={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
+inactiveBlend={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+inactiveForeground={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
