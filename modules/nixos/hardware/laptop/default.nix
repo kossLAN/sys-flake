@@ -38,7 +38,7 @@ in {
             turbo = "never";
           };
           charger = {
-            governor = "performance";
+            governor = "ondemand";
             turbo = "auto";
           };
         };
