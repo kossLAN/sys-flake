@@ -4,13 +4,9 @@
   localhost = "localhost";
 in {
   services = {
-    headscale-custom = {
+    headscale = {
       enable = true;
-      serverUrl = "https://kosslan.me";
-      baseDomain = "ts.kosslan.me";
-      tailnetDomain = "kosslan.me";
       tailnetRecords = [
-        {value = cerebrite;}
         {
           name = "sync";
           value = cerebrite;
@@ -45,6 +41,10 @@ in {
         }
         {
           name = "netdata";
+          value = cerebrite;
+        }
+        {
+          name = "jellyfin";
           value = cerebrite;
         }
       ];

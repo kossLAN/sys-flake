@@ -11,19 +11,6 @@
         "kosslan.me" = {
           reverseProxyList = [
             {
-              extraConfig = ''
-                header Content-Type text/html
-                respond "
-                  <html>
-                    <head><title>Cerebrite</title></head>
-                    <body>
-                      <h3>You are connected to the tailnet.</h3>
-                    </body>
-                  </html>
-                "
-              '';
-            }
-            {
               subdomain = "deluge";
               address = deployment.containerHostIp "deluge";
               port = 8112;
@@ -67,6 +54,11 @@
               subdomain = "netdata";
               address = localhost;
               port = 19999;
+            }
+            {
+              subdomain = "jellyfin";
+              address = localhost;
+              port = 8096;
             }
           ];
         };

@@ -31,6 +31,11 @@
       useRoutingFeatures = "client";
     };
 
+    sunshine = {
+      enable = true;
+      capSysAdmin = true;
+    };
+
     ollama = {
       enable = true;
       host = "0.0.0.0";
