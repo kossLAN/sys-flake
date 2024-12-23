@@ -18,6 +18,7 @@ in {
       enable = true;
       style = "Breeze";
       kdeColorScheme = "BreezeDark";
+      kdeGlobals = ./kdeglobals;
 
       qt5 = {
         package = pkgs.libsForQt5.breeze-qt5;

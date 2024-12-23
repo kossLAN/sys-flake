@@ -83,11 +83,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1731883485,
-        "narHash": "sha256-6gC4NC/ye8JSZ7nIH0F7qxVcJ+Sq51APv1pj8mICTqQ=",
+        "lastModified": 1734911649,
+        "narHash": "sha256-rV3v55G4k+Pqlw5dQUJpACNypbfdbtb1L0SUL0Rf2wM=",
         "owner": "kossLAN",
         "repo": "NvimFlake",
-        "rev": "cdc250e10d16f538d097da7b6349837684384fe1",
+        "rev": "282747a961673cbfb4797e6a107da14eda7860b4",
         "type": "github"
       },
       "original": {

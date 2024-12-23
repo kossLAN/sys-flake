@@ -11,6 +11,7 @@
 in {
   imports = [
     ./breeze
+    ./catppuccin
   ];
 
   # Designed with qtct only in mind, if you use anything perish.
@@ -44,6 +45,11 @@ in {
       colors = mkOption {
         type = path;
       };
+    };
+
+    kdeGlobals = mkOption {
+      type = path;
+      default = "${cfg.qt6.package}/share/color-schemes/${cfg.kdeColorScheme}.colors";
     };
 
     icons = {
@@ -93,7 +99,7 @@ in {
         '';
       in {
         # TODO: Modulize
-        "xdg/kdeglobals".source = "${cfg.qt6.package}/share/color-schemes/${cfg.kdeColorScheme}.colors";
+        "xdg/kdeglobals".source = cfg.kdeGlobals;
         "xdg/qt5ct/qt5ct.conf".text = qtConf cfg.qt5.colors;
         "xdg/qt6ct/qt6ct.conf".text = qtConf cfg.qt6.colors;
       };
