@@ -13,6 +13,11 @@ in {
     av0preshared.file = "${path}/av0preshared.age";
     cloudflare.file = "${path}/cloudflare.age";
 
+    matrix = {
+      file = "${path}/matrix.age";
+      owner = "${config.ids.uids.matrix-synapse}";
+    };
+
     deluge = {
       file = "${path}/deluge.age";
       owner = config.services.deluge.user;

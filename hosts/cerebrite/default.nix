@@ -5,7 +5,6 @@
     ./networking
     ./hardware
     ./arr
-    ./nextcloud
     ./secrets
   ];
 

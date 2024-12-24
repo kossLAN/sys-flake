@@ -75,6 +75,34 @@ in {
               address = cerebrite;
               port = 4000;
             }
+
+            # Matrix
+            {
+              subdomain = "matrix";
+              extraConfig = ''
+                reverse_proxy /_matrix/* ${cerebrite}:8008
+                reverse_proxy /_synapse/client/* ${cerebrite}:8008
+              '';
+            }
+            {
+              extraConfig = ''
+                header /.well-known/matrix/* Content-Type application/json
+                header /.well-known/matrix/* Access-Control-Allow-Origin *
+
+                respond /.well-known/matrix/server `{
+                  "m.server": "matrix.kosslan.dev:443"
+                }`
+
+                respond /.well-known/matrix/client `{
+                  "m.homeserver": {
+                    "base_url": "https://matrix.kosslan.dev"
+                  },
+                  "org.matrix.msc3575.proxy": {
+                    "url": "https://matrix.kosslan.dev"
+                  }
+                }`
+              '';
+            }
           ];
         };
 

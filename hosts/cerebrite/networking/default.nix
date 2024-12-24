@@ -41,11 +41,6 @@
               port = 8384;
             }
             {
-              subdomain = "cloud";
-              address = deployment.containerHostIp "nextcloud";
-              port = 80;
-            }
-            {
               subdomain = "chat";
               address = localhost;
               port = 12121;
@@ -67,6 +62,7 @@
   };
 
   networking = {
+    hostId = "0dcbd9ac";
     networkmanager.enable = true;
     firewall.allowedTCPPorts = [443 80];
     nameservers = ["1.1.1.1" "8.8.8.8"];

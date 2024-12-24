@@ -1,6 +1,7 @@
 {
   imports = [
     ./forgejo
+    ./matrix
     ./ssh
     ./jellyfin
     ./searx

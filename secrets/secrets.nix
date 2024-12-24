@@ -14,6 +14,9 @@ in {
   "wg0client1.age".publicKeys = systems;
   "wg0preshared.age".publicKeys = systems;
 
+  # Matrix Registration Secret
+  "matrix.age".publicKeys = systems;
+
   "cloudflare.age".publicKeys = systems;
   "tailscale.age".publicKeys = systems;
   "deluge.age".publicKeys = systems;

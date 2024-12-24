@@ -12,30 +12,49 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-amd"];
-  boot.extraModulePackages = [];
+  boot = {
+    kernelModules = ["kvm-amd"];
+    kernelParams = ["zfs.zfs_arc_max=17179869184"];
+    extraModulePackages = [];
+    zfs.extraPools = ["media"];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/a6694103-c3f9-4485-a843-4206bf7aec66";
-    fsType = "ext4";
+    supportedFilesystems = {
+      zfs = true;
+    };
+
+    initrd = {
+      availableKernelModules = ["nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
+      kernelModules = [];
+    };
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/BF68-BEA0";
-    fsType = "vfat";
-    options = ["fmask=0077" "dmask=0077"];
+  services.zfs.autoScrub.enable = true;
+
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-label/NIXROOT";
+      fsType = "btrfs";
+    };
+
+    "/boot" = {
+      device = "/dev/disk/by-label/NIXBOOT";
+      fsType = "vfat";
+      options = ["fmask=0022" "dmask=0022"];
+    };
+
+    "/mnt/ssd1" = {
+      device = "/dev/disk/by-uuid/671dc1b7-2f8d-4e59-b65f-ee44bcf949ba";
+      fsType = "ext4";
+    };
+
+    "/mnt/media" = {
+      device = "media/fs1";
+      fsType = "zfs";
+      options = ["zfsutil"];
+    };
   };
 
-  fileSystems."/mnt/ssd1" = {
-    device = "/dev/disk/by-uuid/671dc1b7-2f8d-4e59-b65f-ee44bcf949ba";
-    fsType = "ext4";
-  };
-
-  swapDevices = [
-    {device = "/dev/disk/by-uuid/b333821a-5a22-4a40-97f2-c5c80c870f81";}
-  ];
+  swapDevices = [];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

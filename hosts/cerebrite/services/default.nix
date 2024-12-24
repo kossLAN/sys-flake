@@ -17,6 +17,7 @@
 
   services = {
     ssh.enable = true;
+    matrix.container.enable = true;
     forgejo.container.enable = true;
 
     caddy = {

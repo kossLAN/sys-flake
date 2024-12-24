@@ -68,7 +68,7 @@ in {
     programs = {
       nm-applet.enable = true;
       quickshell.enable = true;
-      waybar.enable = true;
+      # waybar.enable = true;
 
       anyrun = {
         enable = true;
