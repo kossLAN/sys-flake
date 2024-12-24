@@ -1,6 +1,14 @@
 {deployment, ...}: {
   services = {
-    tailscale.enable = true;
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "both";
+
+      extraUpFlags = [
+        "--login-server=https://kosslan.me"
+        "--advertise-routes=192.168.0.0/20"
+      ];
+    };
 
     caddy = {
       enable = true;

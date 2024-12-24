@@ -15,7 +15,7 @@ in {
 
     matrix = {
       file = "${path}/matrix.age";
-      owner = "${config.ids.uids.matrix-synapse}";
+      owner = toString config.ids.uids.matrix-synapse;
     };
 
     deluge = {
