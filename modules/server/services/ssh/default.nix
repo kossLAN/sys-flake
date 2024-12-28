@@ -40,7 +40,7 @@ in {
         ];
 
         settings = {
-          PermitRootLogin = "yes";
+          PermitRootLogin = "prohibit-password";
           PasswordAuthentication = false;
           LogLevel = "VERBOSE";
         };
@@ -58,9 +58,8 @@ in {
         };
 
         ignoreIP = [
-          # Wireguard ports, incase I need to desperately get in for some reason...
-          "10.100.1.2/32"
-          "10.100.1.3/32"
+          "192.168.1.0/20"
+          "100.64.0.0/20"
         ];
       };
     };

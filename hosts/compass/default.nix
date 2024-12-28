@@ -4,6 +4,7 @@
     ./boot
     ./programs
     ./services
+    ./networking
 
     inputs.jovian.nixosModules.jovian
   ];
@@ -19,6 +20,6 @@
 
   system = {
     defaults.enable = true;
-    stateVersion = "23.11";
+    stateVersion = "24.11";
   };
 }

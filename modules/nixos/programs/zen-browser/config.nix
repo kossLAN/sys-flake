@@ -12,6 +12,7 @@
     OfferToSaveLogins = false;
     PromptForDownloadLocation = true;
     NoDefaultBookmarks = true;
+    DisableAppUpdate = true;
 
     EnableTrackingProtection = {
       Cryptomining = true;

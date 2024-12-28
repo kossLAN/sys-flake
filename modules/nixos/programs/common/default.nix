@@ -25,6 +25,7 @@ in {
       xxd
       killall
       file
+      usbutils
     ];
   };
 }

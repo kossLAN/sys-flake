@@ -31,7 +31,6 @@
     zen-browser.enable = true;
     steam.enable = true;
     foot.enable = true;
-    noisetorch.enable = true;
 
     hyprland = {
       enable = true;

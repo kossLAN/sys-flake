@@ -28,6 +28,8 @@ in {
   };
 
   config = mkIf cfg.enable {
+    environment.systemPackages = [cfg.package];
+
     systemd.user.services.quickshell = {
       enable = true;
       description = "Quickshell Service";

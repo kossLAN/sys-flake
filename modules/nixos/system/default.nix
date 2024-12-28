@@ -44,11 +44,7 @@ in {
     # System-wide font configuration
     fonts = {
       packages = with pkgs; [
-        (nerdfonts.override {
-          fonts = [
-            "JetBrainsMono"
-          ];
-        })
+        nerd-fonts.jetbrains-mono
       ];
 
       fontconfig = {
@@ -107,7 +103,7 @@ in {
         self.overlays.additions # Additional Packages
         self.overlays.modifications # Modified Packages
 
-        inputs.nur.overlay # Nix User Repository
+        inputs.nur.overlays.default # Nix User Repository
         inputs.custom-neovim.overlays.default # Neovim Custom Configuration
         inputs.custom-zsh.overlays.default # Zsh Custom Configuration
       ];

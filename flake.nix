@@ -104,8 +104,8 @@
 
     # Steamdeck Modules
     jovian = {
-      url = "github:Jovian-Experiments/Jovian-Nixos";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:Jovian-Experiments/Jovian-Nixos/development";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     # Zen Browser

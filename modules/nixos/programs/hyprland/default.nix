@@ -46,6 +46,7 @@ in {
       };
 
       systemPackages = with pkgs; [
+        hyprland-qtutils
         libsForQt5.dolphin
         libsForQt5.gwenview
         libsForQt5.ark
@@ -248,6 +249,7 @@ in {
         # Window Rules
         windowrulev2=immediate  , xwayland:1
         windowrulev2=float                  , class:org.kde.polkit-kde-authentication-agent-1
+        windowrulev2=float                  , class:org.freedesktop.impl.portal.desktop.kde
         windowrulev2=suppressevent maximize , class:.*
       '';
 

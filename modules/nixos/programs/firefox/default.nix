@@ -10,7 +10,7 @@
 in {
   config = mkIf cfg.enable {
     programs.firefox = {
-      package = pkgs.firefox-bin;
+      package = pkgs.firefox;
 
       policies = {
         # Default policies - these shouldn't be opt out :/
@@ -96,14 +96,6 @@ in {
           "search@kagi.com" = {
             "installation_mode" = "force_installed";
             "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/kagi-search-for-firefox/latest.xpi";
-          };
-          "{3c078156-979c-498b-8990-85f7987dd929}" = {
-            "installation_mode" = "force_installed";
-            "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/sidebery/latest.xpi";
-          };
-          "userchrome-toggle-extended@n2ezr.ru" = {
-            "installation_mode" = "force_installed";
-            "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/userchrome-toggle-extended/latest.xpi";
           };
           # "pipewire-screenaudio@icenjim" = {
           #   "installation_mode" = "force_installed";

@@ -4,7 +4,6 @@
   };
 
   hardware = {
-    opentabletdriver.enable = true;
     bluetooth = {
       enable = true;
       powerOnBoot = true;
@@ -12,8 +11,6 @@
   };
 
   display.amd.enable = true;
-
-  virtualisation.libvirtd.enable = true;
 
   services = {
     ssh.enable = true;

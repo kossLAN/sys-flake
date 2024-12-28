@@ -1,7 +1,11 @@
 {config, ...}: {
   jovian = {
     hardware.has.amd.gpu = true;
-    steamos.useSteamOSConfig = true;
+
+    steamos = {
+      useSteamOSConfig = true;
+      enableMesaPatches = false;
+    };
 
     devices = {
       steamdeck = {
@@ -26,12 +30,15 @@
     };
   };
 
-  # loginmanager.greetd.tuigreet.enable = true;
-
   services = {
     ssh.enable = true;
+    syncthing.enable = true;
     desktopManager.plasma6.enable = true;
-    tailscale.enable = true;
+
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "client";
+    };
 
     xserver = {
       enable = true;
