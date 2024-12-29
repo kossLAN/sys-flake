@@ -54,6 +54,11 @@
               port = 12121;
             }
             {
+              subdomain = "home";
+              address = deployment.containerHostIp "home-assistant";
+              port = 8123;
+            }
+            {
               subdomain = "netdata";
               address = localhost;
               port = 19999;
@@ -71,7 +76,6 @@
 
   networking = {
     hostId = "0dcbd9ac";
-    networkmanager.enable = true;
     firewall.allowedTCPPorts = [443 80];
     nameservers = ["1.1.1.1" "8.8.8.8"];
   };

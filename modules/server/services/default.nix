@@ -9,5 +9,6 @@
     ./unpackerr
     ./headscale
     ./caddy
+    ./home-assistant
   ];
 }

@@ -44,6 +44,10 @@ in {
           value = cerebrite;
         }
         {
+          name = "home";
+          value = cerebrite;
+        }
+        {
           name = "jellyfin";
           value = cerebrite;
         }

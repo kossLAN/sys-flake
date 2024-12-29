@@ -31,8 +31,11 @@ in {
       };
 
       icons = {
-        name = "breeze-dark";
-        package = pkgs.kdePackages.breeze-icons;
+        name = "Papirus-Dark";
+        package = pkgs.catppuccin-papirus-folders.override {
+          flavor = "mocha";
+          accent = "teal";
+        };
       };
     };
   };
