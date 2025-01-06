@@ -170,7 +170,7 @@ in {
 
         misc {
           animate_manual_resizes = false
-          disable_hyprland_logo = false
+          disable_hyprland_logo = true
           focus_on_activate = false
           key_press_enables_dpms = true
           mouse_move_enables_dpms = true

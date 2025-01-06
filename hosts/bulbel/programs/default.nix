@@ -15,10 +15,6 @@
 
       inputs.agenix.packages.${pkgs.stdenv.system}.default
     ];
-
-    variables = {
-      "STEAM_FORCE_DESKTOPUI_SCALING" = "2.0";
-    };
   };
 
   programs = {
@@ -34,7 +30,9 @@
     hyprland = {
       enable = true;
       extraConf = ''
-        monitor = DP-8,3840x2160@120,auto,1.25
+        # Monitor Configuration
+        monitor=eDP-1,2880x1920@120,auto,2.0
+        monitor=DP-7,3840x2160@240,0x0,1.25
       '';
     };
 
