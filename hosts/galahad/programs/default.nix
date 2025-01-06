@@ -34,9 +34,9 @@
 
     hyprland = {
       enable = true;
-      monitors = [
-        "DP-2,3840x2160@240,auto,1.25"
-      ];
+      extraConf = ''
+        monitor = DP-2,3840x2160@240,auto,1.25
+      '';
     };
 
     nh = {

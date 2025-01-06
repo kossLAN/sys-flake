@@ -110,7 +110,7 @@
 
     # Zen Browser
     zen-browser = {
-      url = "github:fufexan/zen-browser-flake";
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

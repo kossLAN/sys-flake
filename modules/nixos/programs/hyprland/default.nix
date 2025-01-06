@@ -11,9 +11,9 @@
   cfg = config.programs.hyprland;
 in {
   options.programs.hyprland = {
-    monitors = mkOption {
-      type = listOf str;
-      default = [];
+    extraConf = mkOption {
+      type = str;
+      default = "";
     };
   };
 
@@ -69,7 +69,6 @@ in {
     programs = {
       nm-applet.enable = true;
       quickshell.enable = true;
-      # waybar.enable = true;
 
       anyrun = {
         enable = true;
@@ -101,11 +100,11 @@ in {
         exec-once = ${lib.getExe pkgs.hypridle}
         exec=${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
 
-        # Monitors
-        ${lib.concatMapStrings (monitor: ''
-            monitor = ${monitor}
-          '')
-          cfg.monitors}
+        ${cfg.extraConf}
+
+        input {
+          accel_profile = "flat";
+        }
 
         animations {
           bezier = linear, 0.5, 0.5, 0.5, 0.5
@@ -123,12 +122,17 @@ in {
 
         decoration {
           blur {
-            contrast = 1
             enabled = false
+            contrast = 1
             new_optimizations = true
             noise = 0
             passes = 5
             size = 8
+          }
+
+          shadow {
+            enabled = true
+            range = 5
           }
 
           rounding = 5
@@ -145,7 +149,7 @@ in {
         general {
           # allow_tearing = true
           border_size = 2
-          col.active_border = rgba(ffffffff)
+          col.active_border = rgba(589D95ff)
           col.inactive_border = rgba(64727db3)
           gaps_in = 3
           gaps_out = 5
@@ -238,9 +242,9 @@ in {
         ## Program Binds
         bind = ${mainmod}, return , exec, foot
         bind = ${mainmod}, R      , exec, dolphin
-        bind = ${mainmod}, B      , exec, zen-bin
+        bind = ${mainmod}, B      , exec, zen
         bind = ${mainmod}, SPACE  , exec, anyrun
-        bind = ${mainmod}, P      , exec, ${lib.getExe pkgs.grimblast} --notify copysave  area ~/Pictures/Screenshots/$(data + 'Screenshot_%s.png')
+        bind = ${mainmod}, P      , exec, ${lib.getExe pkgs.grimblast} --notify copysave area ~/Pictures/Screenshots/$(data + 'Screenshot_%s.png')
 
         ## Mouse Binds
         bindm= ${mainmod}, mouse:272 , movewindow

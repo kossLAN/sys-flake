@@ -28,7 +28,10 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = [cfg.package];
+    environment.systemPackages = [
+      cfg.package
+      pkgs.qt6.qt5compat
+    ];
 
     systemd.user.services.quickshell = {
       enable = true;

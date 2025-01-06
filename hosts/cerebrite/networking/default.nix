@@ -54,11 +54,6 @@
               port = 12121;
             }
             {
-              subdomain = "home";
-              address = deployment.containerHostIp "home-assistant";
-              port = 8123;
-            }
-            {
               subdomain = "netdata";
               address = localhost;
               port = 19999;

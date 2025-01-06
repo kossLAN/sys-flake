@@ -70,7 +70,7 @@ in {
       defaultUserShell = pkgs.zsh;
       users.${config.users.defaultUser} = {
         isNormalUser = true;
-        extraGroups = ["wheel" "networkmanager"];
+        extraGroups = ["wheel" "networkmanager" "dialout"];
         initialPassword = "root";
       };
     };

@@ -18,6 +18,7 @@ in {
       btop
       fastfetch
       nmap
+      usbutils
     ];
   };
 }

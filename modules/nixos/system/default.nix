@@ -44,12 +44,16 @@ in {
     # System-wide font configuration
     fonts = {
       packages = with pkgs; [
-        nerd-fonts.jetbrains-mono
+        nerd-fonts.dejavu-sans-mono
       ];
 
       fontconfig = {
+        enable = true;
+
         defaultFonts = {
-          monospace = ["JetBrainsMono"];
+          serif = ["DejaVu Serif"];
+          sansSerif = ["DejaVu Sans"];
+          monospace = ["DejaVuSansM Nerd Font Mono"];
         };
       };
     };

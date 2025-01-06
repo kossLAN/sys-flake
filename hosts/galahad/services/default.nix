@@ -17,27 +17,11 @@
     common.enable = true;
     syncthing.enable = true;
     blueman.enable = true;
-
-    sound = {
-      enable = true;
-      lowLatency.enable = true;
-    };
+    sound.enable = true;
 
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";
-    };
-
-    sunshine = {
-      enable = true;
-      capSysAdmin = true;
-    };
-
-    ollama = {
-      enable = true;
-      host = "0.0.0.0";
-      acceleration = "rocm";
-      rocmOverrideGfx = "10.3.0";
     };
 
     displayManager = {

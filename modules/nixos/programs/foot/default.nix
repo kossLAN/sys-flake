@@ -18,7 +18,7 @@ in {
         main = {
           shell = "zsh";
           term = "xterm-256color";
-          font = "JetBrainsMono Nerd Font:size=12";
+          font = "DejaVuSansM Nerd Font:size=12";
         };
 
         cursor = {

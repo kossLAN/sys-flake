@@ -19,7 +19,6 @@
     ssh.enable = true;
     matrix.container.enable = true;
     forgejo.container.enable = true;
-    home-assistant.container.enable = true;
 
     caddy = {
       enable = true;
