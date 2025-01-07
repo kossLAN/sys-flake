@@ -113,11 +113,5 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Audio screensharing in firefox
-    pipewire-screenaudio = {
-      url = "github:IceDBorn/pipewire-screenaudio";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 }

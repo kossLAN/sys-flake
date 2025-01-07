@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }: let
   inherit (lib.modules) mkIf;
@@ -9,8 +8,6 @@
 
   cfg = config.hardware.mobile;
 in {
-  imports = [./fprintd];
-
   options.hardware.mobile = {
     enable = mkEnableOption "Mobile power management configuration";
   };
@@ -32,6 +29,7 @@ in {
     services = {
       power-profiles-daemon.enable = false;
       upower.enable = true;
+      fprintd.enable = true;
 
       auto-cpufreq = {
         enable = true;

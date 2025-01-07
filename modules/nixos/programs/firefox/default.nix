@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }: let
   inherit (lib.modules) mkIf;
@@ -97,18 +98,14 @@ in {
             "installation_mode" = "force_installed";
             "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/kagi-search-for-firefox/latest.xpi";
           };
-          # "pipewire-screenaudio@icenjim" = {
-          #   "installation_mode" = "force_installed";
-          #   "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/pipewire-screenaudio/latest.xpi";
-          # };
         };
       };
 
       preferences = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-        # "widget.use-xdg-desktop-portal.file-picker" = 1;
-        # "sidebar.revamp" = false;
-        # "sidebar.verticalTabs" = false;
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
+        "sidebar.revamp" = true;
+        "sidebar.verticalTabs" = true;
       };
     };
   };

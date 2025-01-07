@@ -28,7 +28,7 @@
     git.enable = true;
     java.enable = true;
     obs-studio.enable = true;
-    zen-browser.enable = true;
+    firefox.enable = true;
     steam.enable = true;
     foot.enable = true;
 

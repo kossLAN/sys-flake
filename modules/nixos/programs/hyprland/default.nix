@@ -242,7 +242,7 @@ in {
         ## Program Binds
         bind = ${mainmod}, return , exec, foot
         bind = ${mainmod}, R      , exec, dolphin
-        bind = ${mainmod}, B      , exec, zen
+        bind = ${mainmod}, B      , exec, firefox
         bind = ${mainmod}, SPACE  , exec, anyrun
         bind = ${mainmod}, P      , exec, ${lib.getExe pkgs.grimblast} --notify copysave area ~/Pictures/Screenshots/$(data + 'Screenshot_%s.png')
 
