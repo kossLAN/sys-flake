@@ -14,7 +14,6 @@
 
   boot = {
     kernelModules = ["kvm-amd"];
-    kernelParams = ["zfs.zfs_arc_max=17179869184"];
     extraModulePackages = [];
     zfs.extraPools = ["media"];
 

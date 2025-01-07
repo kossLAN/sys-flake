@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: let
   inherit (lib.modules) mkIf;
@@ -8,6 +9,8 @@
 
   cfg = config.hardware.mobile;
 in {
+  imports = [./fprintd];
+
   options.hardware.mobile = {
     enable = mkEnableOption "Mobile power management configuration";
   };
