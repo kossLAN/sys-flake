@@ -11,14 +11,13 @@
       bambu-studio
       libreoffice-qt
       prismlauncher
-      vesktop
 
       inputs.agenix.packages.${pkgs.stdenv.system}.default
     ];
   };
 
   programs = {
-    zen-browser.enable = true;
+    firefox.enable = true;
     partition-manager.enable = true;
     common.enable = true;
     java.enable = true;
