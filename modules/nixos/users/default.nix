@@ -1,19 +1,11 @@
 {
   lib,
   config,
-  inputs,
-  self,
   pkgs,
   ...
 }: let
   inherit (lib.options) mkOption;
-
-  cfg = config.users;
 in {
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-  ];
-
   options.users = {
     defaultUser = mkOption {
       type = lib.types.str;
@@ -109,24 +101,5 @@ in {
           )
       )
       config.users.users);
-
-    home-manager = {
-      useGlobalPkgs = true;
-      backupFileExtension = "old";
-
-      extraSpecialArgs = {
-        inherit self inputs;
-      };
-
-      users.${config.users.defaultUser} = {
-        programs.home-manager.enable = true;
-        xdg.enable = true;
-
-        home = {
-          stateVersion = config.system.stateVersion;
-          packages = cfg.packages;
-        };
-      };
-    };
   };
 }

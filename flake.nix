@@ -78,12 +78,6 @@
     # Secrets 🤫
     agenix.url = "github:ryantm/agenix";
 
-    # Package Flakes
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Hyprland Window Manager
     hyprland = {
       url = "github:hyprwm/Hyprland";
