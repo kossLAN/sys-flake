@@ -70,11 +70,6 @@ in {
       nm-applet.enable = true;
       quickshell.enable = true;
 
-      anyrun = {
-        enable = true;
-        defaults.enable = true;
-      };
-
       hyprland = {
         # package = inputs.hyprland.packages.${pkgs.system}.default;
         # portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
@@ -243,7 +238,7 @@ in {
         bind = ${mainmod}, return , exec, foot
         bind = ${mainmod}, R      , exec, dolphin
         bind = ${mainmod}, B      , exec, firefox
-        bind = ${mainmod}, SPACE  , exec, anyrun
+        bind = ${mainmod}, SPACE  , exec, qs msg -c shell.qml launcher open
         bind = ${mainmod}, P      , exec, ${lib.getExe pkgs.grimblast} --notify copysave area ~/Pictures/Screenshots/$(data + 'Screenshot_%s.png')
 
         ## Mouse Binds

@@ -90,12 +90,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # App runner
-    anyrun = {
-      url = "github:Kirottu/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Quickshell
     quickshell = {
       url = "github:outfoxxed/quickshell";

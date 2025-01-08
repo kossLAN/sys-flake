@@ -6,8 +6,6 @@
     ./noisetorch
     ./common
     ./corectrl
-    ./anyrun
-    ./waybar
     ./hyprland
     ./custom-neovim
     ./quickshell
