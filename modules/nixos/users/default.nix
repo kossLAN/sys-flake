@@ -12,14 +12,6 @@ in {
       default = "koss";
     };
 
-    packages = mkOption {
-      type = lib.types.listOf lib.types.package;
-      default = [];
-      description = ''
-        A easy way to pass through packages from regular configuration to home manager
-      '';
-    };
-
     users = mkOption {
       type = lib.types.attrsOf (lib.types.submoduleWith {
         modules = [

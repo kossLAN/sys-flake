@@ -55,16 +55,7 @@ in {
     };
 
     # Breeze theme
-    theme = {
-      # breeze.enable = true;
-      gtk.breeze.enable = true;
-      qt.breeze.enable = true;
-
-      cursor = {
-        notwaita.enable = true;
-        cursorSize = 24;
-      };
-    };
+    theme.presets.breeze.enable = true;
 
     programs = {
       nm-applet.enable = true;
@@ -94,6 +85,7 @@ in {
         exec-once = ${lib.getExe pkgs.swaybg} -m fill -i ${./background.jpg}
         exec-once = ${lib.getExe pkgs.hypridle}
         exec=${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
+        exec=quickshell
 
         ${cfg.extraConf}
 

@@ -12,6 +12,7 @@
 in {
   options.programs.quickshell = {
     enable = mkEnableOption "A qtquick based shell for wayland compositors";
+    systemd.enable = mkEnableOption "Enable systemd service to launch quickshell";
 
     package = mkOption {
       type = lib.types.package;
@@ -33,10 +34,14 @@ in {
       pkgs.qt6.qt5compat
     ];
 
-    systemd.user.services.quickshell = {
+    systemd.user.services.quickshell = mkIf cfg.systemd.enable {
       enable = true;
       description = "Quickshell Service";
       wantedBy = ["graphical-session.target"];
+
+      environment = {
+        WAYLAND_DISPLAY = "wayland-1";
+      };
 
       serviceConfig = {
         Type = "simple";

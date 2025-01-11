@@ -78,6 +78,7 @@ in {
       overlays = [
         self.overlays.additions # Additional Packages
         self.overlays.modifications # Modified Packages
+        self.overlays.unstable-packages # Unstable Packages
 
         inputs.nur.overlays.default # Nix User Repository
         inputs.custom-neovim.overlays.default # Neovim Custom Configuration

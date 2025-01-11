@@ -29,7 +29,7 @@
     };
   };
 
-  systemd.tmpfiles.rules = ["d /mnt/ssd1/torrents 1775 deluge storage"];
+  systemd.tmpfiles.rules = ["d /srv/torrents 1775 deluge storage"];
 
   containers.deluge = {
     autoStart = true;

@@ -18,7 +18,6 @@
 
   programs = {
     firefox.enable = true;
-    partition-manager.enable = true;
     common.enable = true;
     java.enable = true;
     git.enable = true;

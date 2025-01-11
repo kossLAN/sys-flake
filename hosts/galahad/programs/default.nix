@@ -18,7 +18,6 @@
   ];
 
   programs = {
-    partition-manager.enable = true;
     corectrl.enable = true;
     common.enable = true;
     git.enable = true;

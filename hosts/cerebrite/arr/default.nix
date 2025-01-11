@@ -40,6 +40,7 @@ in {
 
     lidarr = {
       enable = true;
+      package = pkgs.unstable.lidarr;
       group = group;
     };
 

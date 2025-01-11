@@ -27,24 +27,39 @@ in {
 
         colors = {
           alpha = 1.0;
-          foreground = "cdcdcd";
-          background = "000000";
-          regular0 = "000000";
-          regular1 = "ff8599";
-          regular2 = "00c545";
-          regular3 = "de9d00";
-          regular4 = "00b4ff";
-          regular5 = "fd71f8";
-          regular6 = "00bfae";
-          regular7 = "cdcdcd";
-          bright0 = "262626";
-          bright1 = "ff9eb2";
-          bright2 = "19de5e";
-          bright3 = "f7b619";
-          bright4 = "19cdff";
-          bright5 = "ff8aff";
-          bright6 = "19d8c7";
-          bright7 = "dadada";
+
+          foreground = "d3c6aa";
+          background = "272e33";
+
+          regular0 = "475258";
+          regular1 = "e67e80";
+          regular2 = "a7c080";
+          regular3 = "dbbc7f";
+          regular4 = "7fbbb3";
+          regular5 = "d699b6";
+          regular6 = "83c092";
+          regular7 = "d3c6aa";
+
+          bright0 = "475258";
+          bright1 = "e67e80";
+          bright2 = "a7c080";
+          bright3 = "dbbc7f";
+          bright4 = "7fbbb3";
+          bright5 = "d699b6";
+          bright6 = "83c092";
+          bright7 = "d3c6aa";
+
+          "16" = "e69875";
+          "17" = "d3c6aa";
+
+          selection-foreground = "d3c6aa";
+          selection-background = "3c474d";
+
+          search-box-no-match = "2d353b e67e80";
+          search-box-match = "d3c6aa 3c474d";
+
+          jump-labels = "2d353b e69875";
+          urls = "7fbbb3";
         };
 
         key-bindings = {

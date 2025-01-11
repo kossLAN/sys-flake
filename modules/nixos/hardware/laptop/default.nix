@@ -19,6 +19,8 @@ in {
       cpuFreqGovernor = "powersave";
     };
 
+    security.protectKernelImage = false;
+
     programs = {
       light = {
         enable = true;
@@ -30,6 +32,14 @@ in {
       power-profiles-daemon.enable = false;
       upower.enable = true;
       fprintd.enable = true;
+
+      libinput = {
+        enable = true;
+
+        touchpad = {
+          clickMethod = "clickfinger";
+        };
+      };
 
       auto-cpufreq = {
         enable = true;
