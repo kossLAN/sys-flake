@@ -1,3 +1,11 @@
 {
-  imports = [./deployment ./system ./virtualisation ./users ./services ./programs ./routing];
+  imports = [
+    ./deployment
+    ./system
+    ./virtualisation
+    ./users
+    ./services
+    ./programs
+    ./routing
+  ];
 }

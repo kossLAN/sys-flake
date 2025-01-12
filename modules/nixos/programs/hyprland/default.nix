@@ -153,6 +153,22 @@ in {
           kb_rules =
           kb_variant =
           sensitivity = 0
+
+          touchpad{
+            disable_while_typing=true
+            clickfinger_behavior=true
+          }
+        }
+
+        gestures {
+          workspace_swipe = 1
+          workspace_swipe_fingers = 3
+          workspace_swipe_distance = 200
+          workspace_swipe_min_speed_to_force = 0
+          workspace_swipe_create_new = false
+          workspace_swipe_cancel_ratio = 0.5
+          workspace_swipe_forever = true
+          workspace_swipe_direction_lock = false
         }
 
         misc {

@@ -1,8 +1,6 @@
 {pkgs, ...}: {
   virtualisation = {
-    portainer = {
-      enable = true;
-    };
+    portainer.enable = true;
   };
 
   users = {

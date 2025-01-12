@@ -1,3 +1,3 @@
 {
-  imports = [./portainer];
+  imports = [./portainer ./incus];
 }

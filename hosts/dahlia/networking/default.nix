@@ -143,77 +143,79 @@ in {
     };
   };
 
-  routing.services = [
-    # Git SSH Server
-    {
-      interface = interface;
-      proto = "tcp";
-      dport = "22";
-      ipAddress = cerebrite;
-    }
+  routing = {
+    services = [
+      # Git SSH Server
+      {
+        interface = interface;
+        proto = "tcp";
+        dport = "22";
+        ipAddress = cerebrite;
+      }
 
-    # Syncthing
-    {
-      interface = interface;
-      proto = "tcp";
-      dport = "22000";
-      ipAddress = cerebrite;
-    }
-    {
-      interface = interface;
-      proto = "udp";
-      dport = "21027";
-      ipAddress = cerebrite;
-    }
+      # Syncthing
+      {
+        interface = interface;
+        proto = "tcp";
+        dport = "22000";
+        ipAddress = cerebrite;
+      }
+      {
+        interface = interface;
+        proto = "udp";
+        dport = "21027";
+        ipAddress = cerebrite;
+      }
 
-    # Garry's Mod Server
-    {
-      interface = interface;
-      proto = "udp";
-      dport = "27005";
-      ipAddress = cerebrite;
-    }
-    {
-      interface = interface;
-      proto = "tcp";
-      dport = "27015";
-      ipAddress = cerebrite;
-    }
-    {
-      interface = interface;
-      proto = "udp";
-      dport = "27015";
-      ipAddress = cerebrite;
-    }
+      # Garry's Mod Server
+      {
+        interface = interface;
+        proto = "udp";
+        dport = "27005";
+        ipAddress = cerebrite;
+      }
+      {
+        interface = interface;
+        proto = "tcp";
+        dport = "27015";
+        ipAddress = cerebrite;
+      }
+      {
+        interface = interface;
+        proto = "udp";
+        dport = "27015";
+        ipAddress = cerebrite;
+      }
 
-    # Palworld server.
-    {
-      interface = interface;
-      proto = "udp";
-      dport = "8211";
-      ipAddress = cerebrite;
-    }
-    {
-      interface = interface;
-      proto = "udp";
-      dport = "27016";
-      ipAddress = cerebrite;
-    }
+      # Palworld server.
+      {
+        interface = interface;
+        proto = "udp";
+        dport = "8211";
+        ipAddress = cerebrite;
+      }
+      {
+        interface = interface;
+        proto = "udp";
+        dport = "27016";
+        ipAddress = cerebrite;
+      }
 
-    # Minecraft server.
-    {
-      interface = interface;
-      proto = "tcp";
-      dport = "25565";
-      ipAddress = cerebrite;
-    }
-    {
-      interface = interface;
-      proto = "udp";
-      dport = "24454";
-      ipAddress = cerebrite;
-    }
-  ];
+      # Minecraft server.
+      {
+        interface = interface;
+        proto = "tcp";
+        dport = "25565";
+        ipAddress = cerebrite;
+      }
+      {
+        interface = interface;
+        proto = "udp";
+        dport = "24454";
+        ipAddress = cerebrite;
+      }
+    ];
+  };
 
   networking = {
     firewall.allowedTCPPorts = [80 443];
