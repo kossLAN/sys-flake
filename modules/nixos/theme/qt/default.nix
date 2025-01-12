@@ -14,6 +14,10 @@ in {
   # TODO: Add descriptions
   options.theme.qt = {
     enable = mkEnableOption "Enable QT Theming";
+    package = mkOption {
+      type = package;
+      default = pkgs.kdePackages.breeze;
+    };
 
     style = mkOption {
       type = str;
@@ -33,22 +37,12 @@ in {
     };
 
     qt5 = {
-      package = mkOption {
-        type = package;
-        default = pkgs.libsForQt5.breeze-qt5;
-      };
-
       colors = mkOption {
         type = path;
       };
     };
 
     qt6 = {
-      package = mkOption {
-        type = package;
-        default = pkgs.kdePackages.breeze;
-      };
-
       colors = mkOption {
         type = path;
       };
@@ -123,8 +117,7 @@ in {
       environment = {
         systemPackages = let
           basePackages = [
-            cfg.qt5.package
-            cfg.qt6.package
+            cfg.package
             cfg.icons.package
           ];
 

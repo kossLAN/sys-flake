@@ -51,22 +51,15 @@ in {
     in {
       qt = {
         enable = true;
+        package = pkgs.kdePackages.breeze;
         style = "Breeze";
         kdeColorScheme = "BreezeDark";
         kdeGlobals = ./kdeglobals;
         writeToHome = true;
         icons = iconTheme;
         cursor = cursorTheme;
-
-        qt5 = {
-          package = pkgs.libsForQt5.breeze-qt5;
-          colors = ./colors-qt5.conf;
-        };
-
-        qt6 = {
-          package = pkgs.kdePackages.breeze;
-          colors = ./colors-qt6.conf;
-        };
+        qt5.colors = ./colors-qt5.conf;
+        qt6.colors = ./colors-qt6.conf;
       };
 
       gtk = {
