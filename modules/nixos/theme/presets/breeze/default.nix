@@ -64,10 +64,10 @@ in {
 
       gtk = {
         enable = true;
-        package = pkgs.kdePackages.breeze-gtk;
         name = "Breeze-Dark";
         icons = iconTheme;
         cursor = cursorTheme;
+        package = pkgs.kdePackages.breeze-gtk;
       };
     };
   };
