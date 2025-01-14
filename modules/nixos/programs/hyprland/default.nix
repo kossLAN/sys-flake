@@ -82,7 +82,7 @@ in {
         mainmod = "SUPER";
       in ''
         exec-once = ${lib.getExe' pkgs.dbus "dbus-update-activation-environment"} --systemd --all && systemctl --user stop hyprland-session.target && systemctl --user start hyprland-session.target
-        exec-once = ${lib.getExe pkgs.swaybg} -m fill -i ${./background.jpg}
+        exec-once = ${lib.getExe pkgs.swaybg} -m fill -i ${./wallpaper.jpg}
         exec-once = ${lib.getExe pkgs.hypridle}
         exec=${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1
         exec=quickshell
