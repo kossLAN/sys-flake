@@ -33,7 +33,7 @@ in {
 
     config = mkOption {
       type = lib.types.package;
-      default = inputs.minmat.packages.${pkgs.stdenv.system}.default;
+      default = inputs.dots.packages.${pkgs.stdenv.system}.default;
     };
   };
 
@@ -53,7 +53,6 @@ in {
 
         # utils
         pkgs.grim
-        inputs.matugen.packages.x86_64-linux.default
       ];
     };
 

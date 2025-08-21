@@ -6,7 +6,7 @@
     };
   };
 
-  display.amd.enable = true;
+  graphics.amd.enable = true;
 
   virtualisation.docker = {
     enable = true;

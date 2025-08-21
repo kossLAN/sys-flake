@@ -36,7 +36,7 @@
     custom-neovim.url = "github:kossLAN/nvim-flake";
     custom-zsh.url = "github:kossLAN/zsh-flake";
     agenix.url = "github:ryantm/agenix";
-    dots.url = "git+ssh://git@github.com:kossLAN/dots.git";
+    dots.url = "github:kossLAN/dots";
 
     quickshell = {
       url = "github:outfoxxed/quickshell";

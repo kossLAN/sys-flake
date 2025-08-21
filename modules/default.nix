@@ -1,6 +1,6 @@
 {
   imports = [
-    ./display
+    ./graphics
     ./services
     ./programs
     ./virtualization
