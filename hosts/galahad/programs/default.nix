@@ -36,7 +36,7 @@
       settings = {
         monitor = [
           "desc:LG Electronics LG ULTRAGEAR+ 405NTPC5M160,preferred,0x0,1.25"
-          "desc:HP Inc. OMEN X 27 CNK10336W9,preferred,auto-left,1.0"
+          "desc:HP Inc. OMEN X 27 CNK10336W9,preferred,auto-right,1.0"
         ];
       };
     };

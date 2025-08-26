@@ -86,11 +86,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1755816742,
-        "narHash": "sha256-LtIeo67p3VWokEVKnszEfoR32xg1c94Ctz8+r3XVEZ8=",
+        "lastModified": 1756164102,
+        "narHash": "sha256-gZ8SGrhy63OAWDR73EJYVBX99woswYF7w5lNfPT+Gvo=",
         "owner": "kossLAN",
         "repo": "dots",
-        "rev": "9e44812e939c9a436c2f949274f995f688d6ff99",
+        "rev": "0052b00904803e40e0476e551ba753dc50dde3c5",
         "type": "github"
       },
       "original": {

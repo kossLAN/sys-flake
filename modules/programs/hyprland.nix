@@ -181,8 +181,6 @@ in {
         settings = let
           mainMod = "SUPER";
         in {
-          source = ["colors.conf"];
-
           exec-once = [
             "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
             # "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"
@@ -211,7 +209,7 @@ in {
           };
 
           decoration = {
-            rounding = lib.mkDefault 15;
+            rounding = lib.mkDefault 8;
             blur = {
               enabled = lib.mkDefault true;
               contrast = lib.mkDefault 1;
@@ -236,11 +234,9 @@ in {
 
           general = {
             allow_tearing = lib.mkDefault true;
-            border_size = lib.mkDefault 3;
-            "col.active_border" = lib.mkDefault "$primary";
-            "col.inactive_border" = lib.mkDefault "$inverse_primary";
-            # "col.active_border" = lib.mkDefault "rgba(8AADF4ff)";
-            # "col.inactive_border" = lib.mkDefault "rgba(64727db3)";
+            border_size = lib.mkDefault 1;
+            "col.active_border" = lib.mkDefault "rgba(ffffff26)";
+            "col.inactive_border" = lib.mkDefault "rgba(40434fff)";
             gaps_in = lib.mkDefault 3;
             gaps_out = lib.mkDefault 5;
             layout = lib.mkDefault "dwindle";

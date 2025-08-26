@@ -8,20 +8,14 @@
 
   graphics.amd.enable = true;
 
-  virtualisation.docker = {
-    enable = true;
-  };
-
-  # docker api
-  networking.firewall.allowedTCPPorts = [2375];
-
   services = {
     ssh.enable = true;
     common.enable = true;
     syncthing.enable = true;
     blueman.enable = true;
-    udevRules.keyboard.enable = true;
-    
+
+    # openvpn.servers.ipmi.config = '' config /home/koss/Downloads/TN-3003.conf '';
+
     mysql = {
       enable = true;
       package = pkgs.mysql80;

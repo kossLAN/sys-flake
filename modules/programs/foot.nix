@@ -28,11 +28,11 @@ in {
 
         # Catppuccin
         colors = {
-          alpha = 1.0;
+          alpha = 0.45;
           alpha-mode = "matching";
 
           foreground = lib.mkDefault "cad3f5";
-          background = lib.mkDefault "24273a";
+          background = lib.mkDefault "000000";
 
           regular0 = lib.mkDefault "494d64"; # black
           regular1 = lib.mkDefault "ed8796"; # red
