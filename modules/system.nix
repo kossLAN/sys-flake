@@ -8,15 +8,20 @@
 }: let
   inherit (lib.modules) mkIf;
   inherit (lib.attrsets) mapAttrs mapAttrsToList;
-  inherit (lib.options) mkEnableOption mkOption;
+  inherit (lib.options) mkOption;
+  inherit (lib.types) str bool;
 
   cfg = config.system;
 in {
   options.system = {
     defaults = {
-      enable = mkEnableOption "My opionated system config";
+      enable = mkOption {
+        type = bool;
+        default = true;
+      };
+
       user = mkOption {
-        type = lib.types.str;
+        type = str;
         default = "koss";
       };
     };
@@ -61,13 +66,11 @@ in {
       };
     };
 
-    environment = {
-      sessionVariables = {
-        XDG_CACHE_HOME = "$HOME/.cache";
-        XDG_CONFIG_HOME = "$HOME/.config";
-        XDG_DATA_HOME = "$HOME/.local/share";
-        XDG_STATE_HOME = "$HOME/.local/state";
-      };
+    environment.sessionVariables = {
+      XDG_CACHE_HOME = "$HOME/.cache";
+      XDG_CONFIG_HOME = "$HOME/.config";
+      XDG_DATA_HOME = "$HOME/.local/share";
+      XDG_STATE_HOME = "$HOME/.local/state";
     };
 
     # Enable NTSync for all systems, no reason not to considering all my machines might be used to play

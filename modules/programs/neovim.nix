@@ -5,23 +5,27 @@
   ...
 }: let
   inherit (lib.modules) mkIf;
-  inherit (lib.options) mkEnableOption mkOption;
+  inherit (lib.options) mkOption;
+  inherit (lib.types) bool package;
 
   cfg = config.programs.neovim;
 in {
   disabledModules = ["programs/neovim.nix"];
 
   options.programs.neovim = {
-    enable = mkEnableOption "neovim :3";
+    enable = mkOption {
+      type = bool;
+      default = true;
+    };
 
     package = mkOption {
-      type = lib.types.package;
+      type = package;
       default = pkgs.nvim-pkg;
     };
 
     defaultEditor = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
+      type = bool;
+      default = true;
     };
   };
 

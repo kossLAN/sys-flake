@@ -7,11 +7,10 @@
   inherit (lib.modules) mkIf;
   inherit (lib.options) mkEnableOption;
 
-  cfg = config.graphics.amd;
+  cfg = config.hardware.amdgpu;
 in {
-  # Just common things I enable for AMD GPU's ROCM + Drivers w/e
-  options.graphics.amd = {
-    enable = mkEnableOption "amd common";
+  options.graphics.amdgpu = {
+    enable = mkEnableOption "AMD common settings";
   };
 
   config = mkIf cfg.enable {
@@ -23,10 +22,11 @@ in {
       };
 
       amdgpu = {
-        amdvlk = {
-          enable = true;
-          support32Bit.enable = true;
-        };
+        initrd.enable = true;
+        # amdvlk = {
+        #   enable = true;
+        #   support32Bit.enable = true;
+        # };
 
         overdrive = {
           enable = true;

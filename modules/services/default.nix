@@ -6,6 +6,8 @@
     ./ssh.nix
     ./udev.nix
     ./common.nix
+    ./tailscale.nix
     ./greetd
+    ./zsh.nix
   ];
 }

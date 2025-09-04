@@ -75,11 +75,6 @@
     toHyprconf' initialIndent attrs;
 in {
   options.programs.hyprland = {
-    wallpaper = mkOption {
-      type = path;
-      default = ./wallpaper.jpg;
-    };
-
     settings = mkOption {
       type = with lib.types; let
         valueType =
@@ -160,16 +155,15 @@ in {
     # theme.presets.quickshell.enable = true;
     theme.presets.breeze.enable = true;
 
-    services = {
-      greetd = {
-        enable = true;
-        quickshell.enable = true;
-      };
+    services.greetd = {
+      enable = true;
+      quickshell.enable = true;
     };
 
     programs = {
       kdesuite.enable = true;
       nm-applet.enable = true;
+      foot.enable = true;
 
       quickshell = {
         enable = true;

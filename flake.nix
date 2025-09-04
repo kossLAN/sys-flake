@@ -23,14 +23,12 @@
       }) [
         "galahad" # desktop
         "bulbel" # laptop
-        "compass" # steamdeck
       ]);
   };
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
-
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nur.url = "github:nix-community/NUR";
     custom-neovim.url = "github:kossLAN/nvim-flake";
@@ -41,11 +39,6 @@
     quickshell = {
       url = "github:outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    jovian = {
-      url = "github:Jovian-Experiments/Jovian-Nixos/development";
-      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
   };
 }

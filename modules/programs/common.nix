@@ -1,30 +1,23 @@
 {
+  inputs,
   pkgs,
-  lib,
-  config,
   ...
-}: let
-  inherit (lib.modules) mkIf;
-  inherit (lib.options) mkEnableOption;
+}: {
+  environment.systemPackages = with pkgs; [
+    # terminal apps
+    btop-rocm
+    nmap
+    ripgrep
+    fastfetch
+    zls
+    xxd
+    killall
+    file
+    usbutils
+    inputs.agenix.packages.${pkgs.stdenv.system}.default
 
-  cfg = config.programs.common;
-in {
-  # Common apps...
-  options.programs.common = {
-    enable = mkEnableOption "Basic Utils";
-  };
-
-  config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      btop-rocm
-      nmap
-      ripgrep
-      fastfetch
-      zls
-      xxd
-      killall
-      file
-      usbutils
-    ];
-  };
+    # graphical utils
+    vlc
+    keepassxc
+  ];
 }

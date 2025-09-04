@@ -10,11 +10,17 @@
 
   boot = {
     kernelModules = ["kvm-amd"];
-    extraModulePackages = [];
+    initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "usbhid" "sd_mod"];
 
-    initrd = {
-      availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "usbhid" "sd_mod"];
-      kernelModules = [];
+    loader = {
+      efi.canTouchEfiVariables = true;
+
+      grub = {
+        efiSupport = true;
+        enable = true;
+        device = "nodev";
+        useOSProber = true;
+      };
     };
   };
 
@@ -36,10 +42,7 @@
     {device = "/dev/disk/by-label/swap";}
   ];
 
-  networking = {
-    useDHCP = lib.mkDefault true;
-    hostId = "8425e349";
-  };
+  networking.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
