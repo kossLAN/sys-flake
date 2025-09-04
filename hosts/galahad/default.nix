@@ -18,7 +18,6 @@
 
   programs = {
     corectrl.enable = true;
-    common.enable = true;
     java.enable = true;
     obs-studio.enable = true;
     firefox.enable = true;
@@ -28,7 +27,7 @@
       enable = true;
       settings.monitor = [
         "desc:LG Electronics LG ULTRAGEAR+ 405NTPC5M160,preferred,0x0,1.25"
-        "desc:HP Inc. OMEN X 27 CNK10336W9,preferred,auto-right,1.0"
+        "desc:HP Inc. OMEN X 27 CNK10336W9,preferred,auto-left,1.0"
       ];
     };
   };
@@ -44,6 +43,11 @@
 
   services = {
     syncthing.enable = true;
+
+    mysql = {
+      enable = true;
+      package = pkgs.mysql80;
+    };
 
     printing = {
       enable = true;

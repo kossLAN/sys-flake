@@ -75,7 +75,7 @@ in {
 
     # Enable NTSync for all systems, no reason not to considering all my machines might be used to play
     # play games.
-    boot.kernelModules = mkIf cfg.ntsync.enable ["ntsync"];
+    boot.kernelModules = ["ntsync"];
     services.udev.extraRules = ''KERNEL=="ntsync", MODE="0644"'';
 
     # Common Nix Settings, registry thing is specifically for flakes, don't really remember where I got

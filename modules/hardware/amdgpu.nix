@@ -9,7 +9,7 @@
 
   cfg = config.hardware.amdgpu;
 in {
-  options.graphics.amdgpu = {
+  options.hardware.amdgpu = {
     enable = mkEnableOption "AMD common settings";
   };
 

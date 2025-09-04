@@ -57,11 +57,6 @@
     fwupd.enable = true;
     syncthing.enable = true;
 
-    mysql = {
-      enable = true;
-      package = pkgs.mysql80;
-    };
-
     printing = {
       enable = true;
       drivers = [pkgs.hplipWithPlugin];
